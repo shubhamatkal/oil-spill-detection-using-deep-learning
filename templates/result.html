@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Processing Result</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #0066cc;
+            font-size: 70px;
+        }
+
+        p {
+            font-size: 54px;
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #0066cc;
+            color: #fff;
+            padding: 20px;
+            font-size: 36px;
+            border: none;
+            cursor: pointer;
+        }
+        footer {
+            margin-top: auto;
+            text-align: center;
+            font-size: 18px;
+            color: #b50707;
+            padding: 20px;
+        }
+        .bottom-div {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        button:hover {
+            background-color: #004080;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Processing Result</h1>
+    
+    {% if input %}
+        <p>{{ input }}</p>
+    {% else %}
+        <p>No input given. Return to homepage and upload an image.</p>
+    {% endif %}
+
+    <form action="/" method="get">
+        <button type="submit">Return to Homepage</button>
+    </form>
+    
+    <!-- <footer class="bottom-div">
+        <p style="color:blue;">Team: Systumm |   PICT, Pune</p>
+    </footer> -->
+</body>
+</html>
