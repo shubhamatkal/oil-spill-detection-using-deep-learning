@@ -7,19 +7,33 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
-            margin: 20px;
+            background-image: url("https://images.unsplash.com/photo-1617653719743-c2ff12fb2781?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); /* Replace with your image path */
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            color: #d8d1d1;
+        }
+
+        .container {
+            background-color: rgba(197, 197, 197, 0.327); /* Bright orange with 70% opacity */
+            height: 100vh;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: background-color 0.3s ease; /* Transition for container background */
         }
 
         h1 {
-            color: #0066cc;
+            color: #e7eff8;
             font-size: 70px;
+            transition: color 0.3s ease; /* Transition for text color */
         }
 
         p {
             font-size: 54px;
-            color: #333;
+            color: #ffffff;
+            transition: color 0.3s ease; /* Transition for text color */
         }
 
         form {
@@ -33,7 +47,13 @@
             font-size: 36px;
             border: none;
             cursor: pointer;
+            transition: background-color 0.3s ease; /* Transition for button background */
         }
+
+        button:hover {
+            background-color: #004080;
+        }
+
         footer {
             margin-top: auto;
             text-align: center;
@@ -41,6 +61,7 @@
             color: #b50707;
             padding: 20px;
         }
+
         .bottom-div {
             position: absolute;
             bottom: 0;
@@ -49,26 +70,22 @@
             text-align: center;
             padding: 10px;
         }
-        button:hover {
-            background-color: #004080;
-        }
     </style>
 </head>
 <body>
-    <h1>Image Processing Result</h1>
-    
-    {% if input %}
-        <p>{{ input }}</p>
-    {% else %}
-        <p>No input given. Return to homepage and upload an image.</p>
-    {% endif %}
+    <div class="container">
+        <h1>Image Processing Result</h1>
 
-    <form action="/" method="get">
-        <button type="submit">Return to Homepage</button>
-    </form>
-    
-    <!-- <footer class="bottom-div">
-        <p style="color:blue;">Team: Systumm |   PICT, Pune</p>
-    </footer> -->
+        {% if input %}
+            <p>{{ input }} </p>
+        {% else %}
+            <p>No input given. Return to homepage and upload an image.</p>
+        {% endif %}
+
+        <form action="/" method="get">
+            <button type="submit">Return to Homepage</button>
+        </form>
+    </div>
+
 </body>
 </html>
